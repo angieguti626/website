@@ -1,0 +1,371 @@
+/*  Angelica Gutierrez
+    style.css
+    18 February 2024
+*/
+
+
+/* CSS Reset*/
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1,
+h3,
+nav ul,
+aside,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Styles Rules for Header*/
+.mobile h1 {
+  padding: 2%;
+  text-align: center;
+  font-family: "Annapurna SIL", serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: #fac2cb;
+}
+
+.mobile h3 {
+  text-align: center;
+  font-family: "Annapurna SIL", serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: #fac2cb;
+}
+
+/*Style Rules for Mobile Viewport*/
+/*Style Rules to Show Mobile Class and Hide Tab-Desk class*/
+.info, .table-row, .table-column {
+  display: block;
+}
+
+.table-row {
+  display: flex;
+  background-color: #ffe6ea;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.table-row:nth-child(odd) {
+  background-color: #f7edef;
+}
+
+.table-column img {
+  width: 45%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: .5cm;
+}
+
+.mobile,
+.mobile-tablet {
+  display: block;
+}
+
+.tab-desk,
+.desktop {
+  display: none;
+}
+
+/*Style Rules for Navigation Area*/
+nav {
+  background-color: #f2a3af;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  border-top: 0.5px solid;
+  border-color: #f6eee4;
+  font-size: 1.5em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav li a {
+  display: block;
+  color: black;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-decoration: none;
+}
+
+/* Styles Rules for Body and Container*/
+main {
+  padding: 2%;
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #f6eee4;
+}
+
+/*Text Style*/
+p {
+  font-size: 18px;
+  font-family: "Annapurna SIL", serif;
+  font-style: normal;
+}
+
+/*About Page Info*/
+.container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  margin: 5%;
+}
+
+img {
+  max-width: 100%;
+  border-radius: .5em;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*Style Rules for Hobby Section*/
+aside {
+  text-align: center;
+  font-family: "Annapurna SIL", serif;
+  font-size: 18px;
+}
+
+figure {
+  border: 4px solid #f2a3af;
+  box-shadow: 6px 6px 10px #fac2cb;
+  max-width: 300px;
+  margin: 2% auto;
+}
+
+figcaption {
+  padding: 2%;
+  border-top: 4px solid #f2a3af;
+  font-family: "Poppins", sans-serif;
+  font-size: smaller;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Rotating Figures *NEW FEATURE* */
+figure:hover {
+  transform: rotate(5deg);
+  transition-duration: 1s;
+}
+
+/*Style Rules for Footer Content*/
+footer {
+  text-align: center;
+  font-size: 0.95em;
+  background-color: #f2a3af;
+  color: black;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 0%;
+  padding-right: 0%;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+footer a {
+  color: #f3e6d8;
+  text-decoration: none;
+}
+
+
+/*VIEWPORT INFORMATION*/
+
+/*Media Query For Tablet Viewport*/
+@media screen and (min-width: 620px),
+print {
+
+  /*Tablet Viewport: Show tab-desk class, hide mobile class*/
+  .tab-desk {
+    display: block;
+  }
+
+  table{
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  /*Grid photos in 2 columns*/
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+
+  /*Heading in center*/
+  aside {
+    grid-column: 1 / span 2;
+  }
+}
+
+/*Media Query For Desktop Viewport*/
+@media screen and (min-width: 1000px),
+print {
+
+  /*Desktop Viewport: Show desktop class, hide mobile-tablet class*/
+  .desktop {
+    display: block;
+  }
+
+  .mobile-tablet {
+    display: none;
+  }
+
+  /*Desktop Viewport: Style rules for Nav area*/
+  nav li {
+    font-size: 1.5em;
+  }
+
+  nav li a {
+    padding-top: 0.5em;
+    padding-bottom: .5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  nav li a:hover {
+    color: #2a1f14;
+    background-color: #f6eee4;
+    opacity: 0.5;
+  }
+
+  /*Home page Info Format*/
+
+  .table-column {
+    flex-basis: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .table-column img {
+    width: 45%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: .5cm;
+  }
+
+  .table-row {
+    display: flex;
+    background-color: #ffe6ea;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .table-row:nth-child(odd) {
+    background-color: #f7edef;
+  }
+
+  /*Grid photos in 3 columns*/
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+  }
+
+  /*Heading in center*/
+  aside {
+    grid-column: 1 / span 3;
+  }
+
+  /* Style Rules for Table */
+  table {
+    border: 1px solid #2a1f14;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  caption {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 1%;
+    border: 1px solid #2a1f14;
+  }
+
+  th,
+  td {
+    border: 1px solid #2a1f14;
+    padding: 1%;
+    font-size: 1em;
+    /*Keeping columns all same size regardless of info *NEW FEATURE* */
+    width: 15%;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f2a3af;
+    color: #000000;
+    font-size: 1em;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #deccba;
+  }
+
+}
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px),
+print {
+  body {
+    background: linear-gradient(#f6eee4, #f07083);
+  }
+
+  #wrapper {
+    width: 1920px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main {
+    background-color: #f6eee4;
+  }
+
+}
+
+/*Media Query for Print*/
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+}
